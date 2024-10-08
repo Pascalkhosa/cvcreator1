@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+ <title>PASCALS CURRICULUM VITAE</title>
+<meta charset="utf-8">
+<meta name="descrition" content=" PERSONAL DETAILS">
+<style>
+    body {
+    background-image: url("C:/Users/Pascal/OneDrive/Documents/scsc assigment/pascal.html/R.jpeg");
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+margin: 0;
+    }
+</style>
+<style>
+      #content {
+            background-color: rgba(255, 255, 255, 0.8); /* Light background box */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+      }
+
+#wet{
+    display:flex;
+justify-content:center;
+text-align: center;
+text-align-last:center;
+}
+.profile-pic{
+width: 250px;
+height: 250px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 20px;
+}
+button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        textarea {
+            padding: 10px;
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical; /* Allows the user to resize the textarea vertically */
+        }
+        label {
+            font-weight: bold;
+            display: block;}
+</style>
+
+
+</head>
+<body>
+   <div id="content">
+    <h1 id="wet">CURRICULAM VITAE CREATER</h1>
+    <img src="C:\Users\Pascal\OneDrive\Documents\scsc assigment\pascal.html\IMG-20240511-WA0082.jpg" alt="Profile Picture" class="profile-pic">
+
+    </div>
+</body><br>
+<body>
+    <div id="content">
+
+<h3 id="wet">PERSONAL INFORMATION</h3>
+<label for="name">SURNAME&NAME</label>
+<input type="text" id="name" name="name"><br>
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob"><br>
+<label for="id-no">ID-NO:</label>
+<input type="number" id="id-no" name="id-no"><br>
+<label for="nat">NATIONALITY:</label>
+<input type="text" id="nat" name="nat"><br>
+<label for="pos-add">POSTAL ADDRES:</label>
+<input type="text" id="pos-add" name="pos-add"><br> 
+<label for="tel1">TELEPHONE1:</label>
+<input type="tel" id="tel1" name="tel1"><br>
+<label for="tel2">TELEPHONE2:</label>
+<input type="tel" id="tel2" name="tel2"><br>
+<label for="email-add">EMAIL ADDRESS:</label>
+<input type="email" id="email-add" name="email-add">
+<button id="wet" onclick="savePersonalInfo()">Save Personal Info</button>
+
+    </div>
+<script>
+    function savePersonalInfo() {
+        const name=document.getElementById("name")?.value;
+        const dob = document.getElementById("dob")?.value;
+        const idNo = document.getElementById("id-no")?.value;
+        const nationality = document.getElementById("nat")?.value;
+        const postalAddress = document.getElementById("pos-add")?.value;
+        const telephone1 = document.getElementById("tel1")?.value;
+        const telephone2 = document.getElementById("tel2")?.value;
+        const email = document.getElementById("email-add")?.value;
+    
+        localStorage.setItem("name", name);
+            localStorage.setItem("dob", dob);
+            localStorage.setItem("id-no", idNo);
+            localStorage.setItem("nationality", nationality);
+            localStorage.setItem("postal-address", postalAddress);
+            localStorage.setItem("telephone1", telephone1);
+            localStorage.setItem("telephone2", telephone2);
+            localStorage.setItem("email", email);
+
+            alert("Personal information saved. Continue to the next form.");
+
+        
+    }
+</script>
+</body><br>
+<body>
+    <div id="content">
+
+    <label for="SYNOPSIS">SYNOPSIS:</label>
+    <textarea id="synopsis" name="synopsis" placeholder="Enter your synopsis"></textarea>
+  
+    <button id="wet" onclick="savesynopsis()">Save</button>
+    </div>    
+    <script>
+        function savesynopsis(){
+            const synopsis=document.getElementById("synopsis")?.value;
+            localStorage.setItem("synopsis", synopsis);
+            alert("Synopsis saved");
+        }
+    </script>
+
+   
+</body><br>
+<body>
+    <div id="content">
+
+            <label for="expertise">Area of Expertise:</label>
+            <textarea id="expertise" name="expertise" placeholder="Enter your area of expertise"></textarea>
+        
+        <button id="wet" onclick="saveexpertise()">Save</button>
+            </div>    
+            <script>
+                function saveexpertise(){
+                    const expertise=document.getElementById("expertise")?.value;
+                    localStorage.setItem("expertise", expertise);
+                    alert("Expertise saved");
+                }
+            </script>
+
+</body><br>
+<body>
+    <div id="content">
+        <h2>Enter Your Qualifications</h2>
+        
+        
+        <form id="qualificationForm">
+            <label for="period">Period:</label>
+            <input type="text" id="period" name="period" placeholder="e.g., 2004" required>
+        
+            <label for="institution">Institution:</label>
+            <input type="text" id="institution" name="institution" placeholder="e.g., University of Venda" required>
+        
+            <label for="degree">Degree(s) or Diploma(s) obtained:</label>
+            <input type="text" id="degree" name="degree" placeholder="e.g., Bachelor of Environmental Sciences Honors" required>
+        
+            <button type="submit">Add Qualification</button>
+        </form>
+        
+        
+        <h2>QUALIFICATIONS</h2>
+        <table id="qualificationsTable">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Institution [ Date from - Date to ]</th>
+                    <th>Degree(s) or Diploma(s) obtained:</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+        <script>
+            
+            const form = document.getElementById('qualificationForm');
+            const tableBody = document.querySelector('#qualificationsTable tbody');
+        
+            
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+            
+                const period = document.getElementById('period').value;
+                const institution = document.getElementById('institution').value;
+                const degree = document.getElementById('degree').value;
+        
+                
+                const newRow = document.createElement('tr');
+                const periodCell = document.createElement('td');
+                const institutionCell = document.createElement('td');
+                const degreeCell = document.createElement('td');
+        
+            
+                periodCell.textContent = period;
+                institutionCell.textContent = institution;
+                degreeCell.textContent = degree;
+        
+                
+                newRow.appendChild(periodCell);
+                newRow.appendChild(institutionCell);
+                newRow.appendChild(degreeCell);
+        
+                
+                tableBody.appendChild(newRow);
+        
+                
+                form.reset();
+            });
+        </script>
+        </div>
+        <button id="wet" onclick="savequalifications()">Save</button>
+            </div>    
+            <script>
+                function savequalifications(){
+                    const period=document.getElementById("period")?.value;
+                    const institution=document.getElementById("institution")?.value;
+                    const degree=document.getElementById("degree")?.value;
+                    localStorage.setItem("period", period);
+                    localStorage.setItem("institution",institution);
+                    localStorage.setItem("degree",degree);
+                    alert("Qualifications saved. Continue to the next form.");
+                }
+            </script>
+</body><br>
+<body>  
+    <div id="content">
+    
+        <label for="WORK">WORK EXPERIENCE:</label>
+        <textarea id="WORK" name="WORK" placeholder="Enter your work experience"></textarea>
+    </div>
+    <button id="wet" onclick="saveAllInfo()">Save and Download CV</button>
+    </div>
+    
+    <script>
+    function saveAllInfo() {
+        // Retrieve personal information from localStorage
+        const name = localStorage.getItem("name");
+            const dob = localStorage.getItem("dob");
+            const idNo = localStorage.getItem("id-no");
+            const nationality = localStorage.getItem("nationality");
+            const postalAddress = localStorage.getItem("postal-address");
+            const telephone1 = localStorage.getItem("telephone1");
+            const telephone2 = localStorage.getItem("telephone2");
+            const email = localStorage.getItem("email");
+            const synopsis=localStorage.getItem("synopsis");
+            const expertise=localStorage.getItem("expertise");
+            const period=localStorage.getItem("period");
+            const institution=localStorage.getItem("institution");
+            const degree=localStorage.getItem("degree");
+            const qualifications = `${period}, ${institution}, ${degree}`;
+            const WORK=document.getElementById("WORK")?.value;
+            const completeData = `
+                Name: ${name}
+                Date of Birth: ${dob}
+                ID No: ${idNo}
+                Nationality: ${nationality}
+                Postal Address: ${postalAddress}
+                Telephone 1: ${telephone1}
+                Telephone 2: ${telephone2}
+                Email: ${email}
+                
+                Synopsis: ${synopsis}
+    
+                AREA OF EXPERTISE: ${expertise}
+    
+                QUALIFICATIONS: ${qualifications}
+    
+                WORK EXPERIENCE: ${WORK}
+                `;
+    
+            
+    const blob = new Blob([completeData], { type: 'text/plain' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+    
+                // Set the filename using the user's name
+                const sanitizedFileName = name.replace(/[^a-z0-9]/gi, '_').toLowerCase(); // Sanitize the filename
+                link.download = `${sanitizedFileName}_CV.txt`; // Use the sanitized name for the file
+                link.click();
+                URL.revokeObjectURL(link.href);
+            }       
+    
+    
+    </script>
+<body>
+</html>
